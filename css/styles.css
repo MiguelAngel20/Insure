@@ -1,3 +1,18 @@
+/** Typography for headings (TITULOS H1, H2) */
+@font-face {
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/DMSerifDisplay-Regular.ttf');
+}
+/** Typography for body */
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Karla-VariableFont_wght.ttf');
+}
+
 :root{
     /* Colores primarios */
     --Dark-Violet: hsl(256, 26%, 20%);
@@ -8,3 +23,81 @@
     --Very-Light-Gray: hsl(0, 0%, 98%);
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**
+ * Header Landing Page by Virbes
+ */
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0px auto;
+} 
+
+header nav .logo img {
+    margin-top: 30px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: block;
+    color: var(--Grayish-Blue);
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+header nav ul li a:hover {color: var(--Dark-Violet)}
+header nav ul li:last-child {border: 1px solid #000;}
+header nav ul li:last-child a:hover {background-color: var(--Dark-Violet);color: #fff;}
+
+.menu-button {
+    display: none;
+    z-index: 1;
+
+    margin-top: 25px;
+}
+.menu-button button {
+    border: 0;
+    background: transparent;
+}
+
+@media (max-width: 375px) {
+    header {
+        padding-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    header nav {
+        flex-flow: row wrap;
+    }
+    header nav .logo {
+        order: 1;
+        /* flex-grow: 1; */
+    }
+    header nav ul {
+        /* display: none; */
+        width: 100%;
+        order: 3;
+        /* flex-grow: 1; */
+    }
+    .menu-button {
+        order: 2;
+        display: block;
+        /* flex-grow: 1; */
+    }
+}
