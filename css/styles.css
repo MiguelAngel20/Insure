@@ -89,6 +89,79 @@ header nav .menu-button button {
     background: transparent;
 }
 
+/** Estilos del main */
+.main{
+    position: relative;
+    width: 100%;
+    background-color: var(--Dark-Violet);
+}
+
+.contenedor{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__left{
+    width: 120px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+}
+
+.contenedor__right{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    right: 0;
+    top: 0;
+}
+
+.humanizing{
+    width: 100%;
+}
+
+.humanizing__linea{
+    width: 150px;
+    height: 1.5px;
+    background-color: var(--Very-Light-Gray);
+}
+
+.humanizing__titulo{
+    font-size: 3rem;
+    color: var(--Very-Light-Gray);
+}
+
+.humanizing__parrafo{
+    font-size: 1.1rem;
+    color: var(--Very-Light-Gray);
+    text-align: justify;
+    padding-right: 30px;
+}
+
+.humanizing__enlace{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--Very-Light-Gray);
+    border: 2px solid var(--Very-Light-Gray);
+    padding: 10px;
+}
+
+.image{
+    width: 100%;
+}
+
+.image__family{
+    display: inline-block;
+    width: 100%;
+    height: 520px;
+    margin-bottom: -150px;
+    object-fit: cover;
+}
+
 @media (max-width: 375px) {
     header {
         padding-bottom: 15px;
