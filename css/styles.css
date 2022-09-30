@@ -5,6 +5,7 @@
     font-weight: 400;
     src: url('fonts/DMSerifDisplay-Regular.ttf');
 }
+
 /** Typography for body */
 @font-face {
     font-family: 'Karla';
@@ -13,7 +14,7 @@
     src: url('fonts/Karla-VariableFont_wght.ttf');
 }
 
-:root{
+:root {
     /* Colores primarios */
     --Dark-Violet: hsl(256, 26%, 20%);
     --Grayish-Blue: hsl(216, 30%, 68%);
@@ -40,11 +41,10 @@ header nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     text-transform: uppercase;
     width: 80%;
     margin: 0px auto;
-} 
+}
 
 header nav .logo img {
     margin-top: 30px;
@@ -61,43 +61,92 @@ header nav ul li a {
     letter-spacing: 1px;
 }
 
-header nav ul li a:hover {color: var(--Dark-Violet)}
-header nav ul li:last-child {border: 1px solid #000;}
-header nav ul li:last-child a:hover {background-color: var(--Dark-Violet);color: #fff;}
+header nav ul li a:hover {
+    color: var(--Dark-Violet);
+}
 
-.menu-button {
+header nav ul li:last-child {
+    border: 2px solid #000;
+}
+
+header nav ul li:last-child a {
+    color: #000;
+}
+
+header nav ul li:last-child a:hover {
+    background-color: var(--Dark-Violet);
+    color: #fff;
+}
+
+header nav .menu-button {
     display: none;
     z-index: 1;
-
     margin-top: 25px;
 }
-.menu-button button {
-    border: 0;
+
+header nav .menu-button button {
+    border: 0px;
     background: transparent;
 }
 
 @media (max-width: 375px) {
     header {
         padding-bottom: 15px;
-        box-sizing: border-box;
     }
 
     header nav {
-        flex-flow: row wrap;
+        flex-wrap: wrap;
+        width: 100%;
     }
+
     header nav .logo {
         order: 1;
-        /* flex-grow: 1; */
+        margin-left: 25px;
     }
-    header nav ul {
-        /* display: none; */
-        width: 100%;
-        order: 3;
-        /* flex-grow: 1; */
-    }
-    .menu-button {
+
+    header nav .menu-button {
         order: 2;
         display: block;
-        /* flex-grow: 1; */
+        margin-right: 25px;
+    }
+
+    header nav ul {
+        order: 3;
+        display: none;
+        background-color: var(--Very-Dark-Violet);
+        background-image: url("../images/bg-pattern-mobile-nav.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        position: absolute;
+        margin-top: 20%;
+        padding-left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    header nav ul li {
+        display: block;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    header nav ul li a {
+        color: #fff;
+        letter-spacing: 2px;
+    }
+
+    header nav ul li a:hover {
+        color: var(--Dark-Grayish-Violet);
+    }
+
+    header nav ul li:last-child {
+        border: 2px solid #ccc;
+    }
+
+    header nav ul li:last-child a {
+        color: #fff;
     }
 }
