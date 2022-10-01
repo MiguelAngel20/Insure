@@ -92,12 +92,17 @@ header nav .menu-button button {
 
 /** Estilos del main */
 .main{
+    width: 100%;
+}
+
+.contenedor{
     position: relative;
     width: 100%;
     background-color: var(--Dark-Violet);
 }
 
-.contenedor{
+.contenedor__humanizing{
+    
     width: 80%;
     height: 500px;
     margin: auto;
@@ -107,9 +112,9 @@ header nav .menu-button button {
 }
 
 .contenedor__left{
-    width: 120px;
     position: absolute;
-    left: 0;
+    width: 120px;
+    left: 0px;
     bottom: -200px;
 }
 
@@ -163,67 +168,46 @@ header nav .menu-button button {
     object-fit: cover;
 }
 
-@media (max-width: 375px) {
-    header {
-        padding-bottom: 15px;
-    }
+.descripcion{
+    width: 80%;
+    margin: 200px auto;
+}
 
-    header nav {
-        flex-wrap: wrap;
-        width: 100%;
-    }
+.descripcion__linea{
+    width: 150px;
+    height: 2px;
+    background-color: var(--Dark-Violet);
+}
 
-    header nav .logo {
-        order: 1;
-        margin-left: 25px;
-    }
+.descripcion__text{
+    font-size: 3rem;
+    font-weight: bold;
+}
 
-    header nav .menu-button {
-        order: 2;
-        display: block;
-        margin-right: 25px;
-    }
+.items{
+    display: flex;
+    margin-top: 50px;
+}
 
-    header nav ul {
-        order: 3;
-        z-index: 1;
-        display: none;
-        background-color: var(--Very-Dark-Violet);
-        background-image: url("../images/bg-pattern-mobile-nav.svg");
-        background-repeat: no-repeat;
-        background-position: bottom 0px left 0px;
-        position: absolute;
-        margin-top: 20%;
-        padding-left: 0px;
-        width: 100%;
-        height: 100%;
-    }
+.items__card{
+    width: 100%;
+    height: 100%;
+}
 
-    header nav ul li {
-        display: block;
-        width: 70%;
-        margin: 30px auto;
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
-    }
+.items__img{
+    width: 70px;
+    height: 70px;
+}
 
-    header nav ul li a {
-        color: #fff;
-        letter-spacing: 2px;
-    }
+.items__name{
+    font-size: 1.8rem;
+    color: var(--Dark-Violet);
+    font-weight: bold;
+}
 
-    header nav ul li a:hover {
-        color: var(--Dark-Grayish-Violet);
-    }
-
-    header nav ul li:last-child {
-        border: 2px solid #ccc;
-    }
-
-    header nav ul li:last-child a {
-        color: #fff;
-    }
+.items__parrafo{
+    font-size: 1rem;
+    color: var(--Grayish-Blue);
 }
 
 /* FOOTER */
@@ -274,6 +258,148 @@ header nav .menu-button button {
     font-weight: 700;
     font-size: 13px;
     text-transform: uppercase;
+}
+
+/** Responsive Design */
+
+@media (max-width: 375px) {
+    header {
+        padding-bottom: 15px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header nav .logo {
+        order: 1;
+        margin-left: 25px;
+    }
+
+    header nav .menu-button {
+        order: 2;
+        display: block;
+        margin-right: 25px;
+    }
+
+    header nav ul {
+        order: 3;
+        z-index: 1;
+        display: none;
+        background-color: var(--Very-Dark-Violet);
+        background-image: url("../images/bg-pattern-mobile-nav.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+        position: absolute;
+        margin-top: 20%;
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .main{
+        margin: 0;
+    }
+    .image{
+        order: 1;
+        width: 100%;
+    }
+
+    .image__family{
+        width: 100%;
+        height: 100%;
+    }
+
+    .humanizing{
+        width: 90%;
+        order: 2;
+        text-align: center;
+        padding-bottom: 100px;
+        margin: auto;
+    }
+
+    .humanizing__linea{
+        display: none;
+    }
+
+    .humanizing__titulo{
+        font-size: 2.5rem;
+    }
+
+    .humanizing__parrafo{
+        width: 100%;
+    }
+
+    .contenedor__left{
+        display: none;
+    }
+
+    .contenedor__right{
+        display: none;
+    }
+
+    .descripcion{
+        margin-top: 100px;
+    }
+
+    .descripcion__linea{
+        margin: auto;
+    }
+
+    .descripcion__text{
+        width: 100%;
+        text-align: center;
+        font-size: 2.7rem;
+    }
+
+    .items{
+        flex-direction: column;
+    }
+
+    .items__card{
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .items__parrafo{
+        line-height: 1.6;
+    }
+}
+    
+
+@media screen and (max-width: 375px){
+    .contenedor__humanizing{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    header nav ul li {
+        display: block;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    header nav ul li a {
+        color: #fff;
+        letter-spacing: 2px;
+    }
+
+    header nav ul li a:hover {
+        color: var(--Dark-Grayish-Violet);
+    }
+
+    header nav ul li:last-child {
+        border: 2px solid #ccc;
+    }
+
+    header nav ul li:last-child a {
+        color: #fff;
+    }
 }
 
 @media (max-width: 475px) and (min-width: 375px){
