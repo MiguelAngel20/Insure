@@ -3,7 +3,6 @@ import data from '../footer.json' assert {type: 'json'};
 const footerInfo = document.querySelector('.footer__info');
 
 data.forEach( element=>{
-    console.log(element);
     footerInfo.innerHTML += `
     <div class="footer__titulo">
         <p>${element.title}</p>
