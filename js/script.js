@@ -3,6 +3,7 @@ const toggleButton = document.getElementById('buttonMenu');
 const imgToggleButton = document.querySelector('#buttonMenu img');
 const menu = document.querySelector('header nav ul');
 const main = document.querySelector('body main.main');
+const footer = document.querySelector('footer.footer');
 let isClosed = true;
 // End of variables declaration
 
@@ -18,11 +19,13 @@ function showMenu() {
         imgToggleButton.src = '../images/icon-close.svg';
         menu.style.display = 'block';
         main.style.display = 'none';
+        footer.style.display = 'none';
         isClosed = false;
     } else {
         imgToggleButton.src = '../images/icon-hamburger.svg';
         menu.style.display = 'none';
         main.style.display = 'block';
+        footer.style.display = 'block';
         isClosed = true;
     }
 }

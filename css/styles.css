@@ -305,7 +305,7 @@ header nav .menu-button button {
 
 /** Responsive Design */
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     header {
         padding-bottom: 15px;
     }
@@ -333,12 +333,13 @@ header nav .menu-button button {
         background-color: var(--Very-Dark-Violet);
         background-image: url("../images/bg-pattern-mobile-nav.svg");
         background-repeat: no-repeat;
-        background-position: bottom 0px left 0px;
+        background-position: bottom 0px right 0px;
+        background-size: 100%;
         position: absolute;
         margin-top: 20%;
         padding-left: 0px;
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     header nav ul li {
@@ -384,7 +385,7 @@ header nav .menu-button button {
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 425px){
     .main{
         margin: 0;
     }
@@ -457,7 +458,7 @@ header nav .menu-button button {
 }
     
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 425px){
     .contenedor__humanizing{
         flex-direction: column;
         width: 100%;
