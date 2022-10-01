@@ -1,0 +1,31 @@
+[
+    {
+        "title": "our company",
+        "sub1": "how we work",
+        "sub2": "why  insure?",
+        "sub3": "view plans",
+        "sub4": "reviews"
+    },
+    {
+        "title": "help me",
+        "sub1": "faq",
+        "sub2": "terms of use",
+        "sub3": "privacy policy",
+        "sub4": "cookies"
+    },
+    {
+        "title": "contact",
+        "sub1": "sales",
+        "sub2": "support",
+        "sub3": "live chat",
+        "sub4": ""
+    },
+    {
+        "title": "others",
+        "sub1": "careers",
+        "sub2": "press",
+        "sub3": "licenses",
+        "sub4": ""
+    }
+
+]
