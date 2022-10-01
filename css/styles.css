@@ -16,12 +16,17 @@ body{
 
 /** Estilos del main */
 .main{
+    width: 100%;
+}
+
+.contenedor{
     position: relative;
     width: 100%;
     background-color: var(--Dark-Violet);
 }
 
-.contenedor{
+.contenedor__humanizing{
+    
     width: 80%;
     height: 500px;
     margin: auto;
@@ -31,9 +36,9 @@ body{
 }
 
 .contenedor__left{
-    width: 120px;
     position: absolute;
-    left: 0;
+    width: 120px;
+    left: 0px;
     bottom: -200px;
 }
 
@@ -85,4 +90,123 @@ body{
     height: 520px;
     margin-bottom: -150px;
     object-fit: cover;
+}
+
+.descripcion{
+    width: 80%;
+    margin: 200px auto;
+}
+
+.descripcion__linea{
+    width: 150px;
+    height: 2px;
+    background-color: var(--Dark-Violet);
+}
+
+.descripcion__text{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.items{
+    display: flex;
+    margin-top: 50px;
+}
+
+.items__card{
+    width: 100%;
+    height: 100%;
+}
+
+.items__img{
+    width: 70px;
+    height: 70px;
+}
+
+.items__name{
+    font-size: 1.8rem;
+    color: var(--Dark-Violet);
+    font-weight: bold;
+}
+
+.items__parrafo{
+    font-size: 1rem;
+    color: var(--Grayish-Blue);
+}
+
+@media screen and (max-width: 375px){
+    .contenedor__humanizing{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image{
+        order: 1;
+        width: 100%;
+    }
+
+    .image__family{
+        width: 100%;
+        height: 100%;
+    }
+
+    .humanizing{
+        width: 90%;
+        order: 2;
+        text-align: center;
+        padding-bottom: 100px;
+        margin: auto;
+    }
+
+    .humanizing__linea{
+        display: none;
+    }
+
+    .humanizing__titulo{
+        font-size: 2.5rem;
+    }
+
+    .humanizing__parrafo{
+        width: 100%;
+    }
+
+    .contenedor__left{
+        display: none;
+    }
+
+    .contenedor__right{
+        display: none;
+    }
+
+    .descripcion{
+        margin-top: 100px;
+    }
+
+    .descripcion__linea{
+        margin: auto;
+    }
+
+    .descripcion__text{
+        width: 100%;
+        text-align: center;
+        font-size: 2.7rem;
+    }
+
+    .items{
+        flex-direction: column;
+    }
+
+    .items__card{
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .items__parrafo{
+        line-height: 1.6;
+    }
+
+
+
+
 }
