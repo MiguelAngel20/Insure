@@ -24,6 +24,7 @@
     --Very-Light-Gray: hsl(0, 0%, 98%);
 }
 
+
 body {
     padding: 0;
     margin: 0;
@@ -185,6 +186,7 @@ header nav .menu-button button {
 
     header nav ul {
         order: 3;
+        z-index: 1;
         display: none;
         background-color: var(--Very-Dark-Violet);
         background-image: url("../images/bg-pattern-mobile-nav.svg");
@@ -222,4 +224,19 @@ header nav .menu-button button {
     header nav ul li:last-child a {
         color: #fff;
     }
+}
+
+/* FOOTER */
+
+.footer{
+    border: 1px solid #000;
+    background-color: var(--Very-Light-Gray);
+}
+.footer__conteiner{
+    width: 80%;
+    margin: 100px auto;
+}
+.footer__h2{
+    text-transform: uppercase;
+    margin-top: 30px;
 }
